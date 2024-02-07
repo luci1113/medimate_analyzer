@@ -10,7 +10,7 @@ import io
 load_dotenv()
 
 genai.configure(api_key=getenv("API_KEY"))
-model = genai.GenerativeModel('gemini-pro-vision')
+model = genai.GenerativeModel(name='gemini-pro-vision')
 app = Flask(__name__)
 limiter = Limiter(
     get_remote_address,
